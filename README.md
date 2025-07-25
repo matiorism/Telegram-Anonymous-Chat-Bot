@@ -135,3 +135,26 @@ The bot is configured via environment variables (secrets) which are loaded by `c
   - `ALLOWED` (Optional): Controls who can use the bot. Defaults to `"ALL"`.
       - Set to `"ALL"` to allow any Telegram user.
       - Set to a comma-separated string of Telegram usernames to create a whitelist (e.g., `"user1,user2"`).
+
+### Alternative: Single-File Configuration
+
+If you have trouble setting up secrets or encounter errors like `BOT_TOKEN variable not found in environment`, you can place your configuration directly into the main script.
+
+1.  Open your `entry.py` file.
+
+2.  Remove the line `from config import BOT_TOKEN, BOT_ID, BOT_TELEGRAM_ID`.
+
+3.  Add your configuration variables at the top of the file, like this:
+
+    ```python
+    # Configuration
+    BOT_TOKEN = "8126840226:AAFce69FYlc1K-apdRdk4e52_hCObhSV6Qo" # Replace with your token
+    BOT_ID = "MyAnonymousBot" # Replace with your bot's username
+    ALLOWED = "ALL"
+
+    # --- Derived Configuration ---
+    BOT_TELEGRAM_ID = BOT_TOKEN.split(':')[0] if BOT_TOKEN else ""
+    ```
+
+> **⚠️ Security Warning**
+> This method is simpler for deployment but involves "hardcoding" your sensitive `BOT_TOKEN` into the script. This is less secure than using Cloudflare's secrets manager. Only use this method for personal projects and ensure your code is not publicly visible with the token inside.
