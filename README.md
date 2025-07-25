@@ -14,7 +14,7 @@ This project is structured with a separate configuration file (`config.py`) for 
   - **Secure & Private**: Configuration is handled via environment secrets. Sender information is obfuscated in callbacks.
   - **Rate Limiting**: Basic protection against spam and abuse.
 
-## 🤔 How It Works
+## ❓ How It Works
 
 1.  **Get Your Link**: A user starts the bot and requests their unique anonymous link. The bot generates a link like `https://t.me/YourBotUsername?start=uniquekey`.
 2.  **Share the Link**: The user shares this link on their social media or with friends.
