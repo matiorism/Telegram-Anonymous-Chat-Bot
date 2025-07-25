@@ -131,7 +131,7 @@ This registers your worker's unique webhook URL with the Telegram API. Your bot 
 The bot is configured via environment variables (secrets) which are loaded by `config.py`.
 
   - `BOT_TOKEN` (Required): Your Telegram bot token. The script will not run without it.
-  - `BOT_ID` (Optional): Your bot's Telegram username. Defaults to `"WhoWouldBe"` if not set.
+  - `BOT_ID` (Optional): Your bot's Telegram username. Defaults to `"USERNAME"` if not set.
   - `ALLOWED` (Optional): Controls who can use the bot. Defaults to `"ALL"`.
       - Set to `"ALL"` to allow any Telegram user.
       - Set to a comma-separated string of Telegram usernames to create a whitelist (e.g., `"user1,user2"`).
@@ -148,8 +148,8 @@ If you have trouble setting up secrets or encounter errors like `BOT_TOKEN varia
 
     ```python
     # Configuration
-    BOT_TOKEN = "8126840226:AAFce69FYlc1K-apdRdk4e52_hCObhSV6Qo" # Replace with your token
-    BOT_ID = "MyAnonymousBot" # Replace with your bot's username
+    BOT_TOKEN = "0222426:Adc6sdc1K....." # Replace with your token
+    BOT_ID = "USERNAME" # Replace with your bot's username
     ALLOWED = "ALL"
 
     # --- Derived Configuration ---
