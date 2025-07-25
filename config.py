@@ -6,7 +6,7 @@ import os
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # Your bot's username
-BOT_ID = os.getenv("BOT_ID", "WhoWouldBe")
+BOT_ID = os.getenv("BOT_ID", "USERNAME")
 
 # Set to "ALL" or a comma-separated list of usernames. Defaults to "ALL".
 ALLOWED = os.getenv("ALLOWED", "ALL")
